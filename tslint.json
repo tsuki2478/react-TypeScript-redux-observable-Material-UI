@@ -1,0 +1,31 @@
+{
+  // "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": ["tslint-react"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  },
+  "rules": {
+    "jsx-no-lambda": false,
+    "no-console": false,
+    "prefer-for-of": false,
+    // 用单引号, 但是在 JSX 中，强制使用双引号
+    // "quotemark": [true, "single", "jsx-double"],
+    // "semicolon": [true, "never"],
+    // 这个规则使每个接口以 I 开头，这点我不喜欢
+    "interface-name": [false, "never-prefix"],
+    // 这个规则强制对象中的 key 按照字母顺序排列 
+    "object-literal-sort-keys": false,
+    "jsx-no-multiline-js": false,
+    // 可以使用ref字符串
+    "jsx-no-string-ref": false,
+    // 解决react中的钩子函数要加修饰符的问题
+    "member-access": [true, "no-public"],
+    // 闭合必须在同一行
+    "jsx-alignment": false,
+    // 导入包是否按照首字母排序
+    "eofline": false
+  }
+}
